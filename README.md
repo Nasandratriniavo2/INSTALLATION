@@ -1,5 +1,5 @@
 # INSTALLATION
-NSTALLATION DE MYSQL
+    INSTALLATION DE MYSQL
 CODE SOURCE:mysql-8.0.36.tar.gz
 →Il faut tout d’abord décompresser et désarchiver:
     • :~$ tar -zxvf mysql-8.0.36.tar.gz
@@ -9,7 +9,6 @@ CODE SOURCE:mysql-8.0.36.tar.gz
 
 →Ensuite,on va lire les fichiers comme README pour voir comment installer mysql.
     • :~/mysql-8.0.36$ more README
-
 
 →D’après les documentations,on a besoins de cmake:
     • :~/mysql-8.0.36$ sudo apt-get install cmake
@@ -30,7 +29,7 @@ Seulement,il y’a des erreurs dû aux dépendances.(C’est au cours de l’ é
                   →:/mysql-8.0.36/build$ cd
                   →:~$ tar -jxvf boost_1_77_0.tar.bz2 
                   →:~$ cd boost_1_77_0
-            ▪ On va executer le script bootstrap.sh puis on obtient un ficher «b2» que l’on va éxécuter et on va ensuite installer(On a identifier les étapes à suivre grâce aux documentations):
+            ▪ On va executer le script bootstrap.sh puis on obtient un ficher «b2» que l’on va éxécuter et on va ensuite                  installer(On a identifier les étapes à suivre grâce aux documentations):
                   →:~/boost_1_77_0$ ./bootstrap.sh
                   →:~/boost_1_77_0$ sudo ./b2
                   →:~/boost_1_77_0$ sudo ./b2 install  
@@ -38,29 +37,27 @@ Seulement,il y’a des erreurs dû aux dépendances.(C’est au cours de l’ é
 →Maintenant que l’on a les dépendances,on va refaire l’opération:
     • :~$ cd  mysql-8.0.36/build
     • :~/mysql-8.0.36/build$ cmake ..
-
+    
 →On va utiliser les commandes suivantes:
     • :~/mysql-8.0.36/build$ sudo make →Pour compiler les codes sources  
     • :~/mysql-8.0.36/build$ sudo make install →Pour envoyer les fichiers dans l’arborescence et termine l’installation
-
-(Cette image correspond à la fin de l’opération de «make install»)
 
 →Pour vérifier que mysql est bien installer, on va faire la commande suivante:
     • :~$ /usr/local/mysql/bin/mysql --version
 
 
 
-INSTALLATION DE APACHE
+    INSTALLATION DE APACHE
 CODE SOURCE:httpd-2.4.59.tar.gz
 →Il faut tout d’abord décompresser et désarchiver:
     • :~$ tar -zxvf httpd-2.4.59.tar.gz
 
 →Après on va se déplacer dans le répertoire:
     • :~$ cd httpd-2.4.59
-
+    
 →Puis,il faut lire les documentations pour comprendre comment installer apache.
     • :~/httpd-2.4.59$ more README
-
+    
 →Ensuite,on va éxecuter le fihier configure pour faire sortir le makefile:
     • :~/httpd-2.4.59$ ./configure
 Seulement,il y’a des erreurs dû aux dépendances.On va donc télécharger les dépendances qu’apache a besoin(C’est au cours de l’éxécution «./configure» qu’on peut identifier les dépendances qu’apache a besoins):
@@ -75,17 +72,16 @@ Seulement,il y’a des erreurs dû aux dépendances.On va donc télécharger les
     • :~/httpd-2.4.59$ sudo make →Pour compiler les codes sources  
     • :~/httpd-2.4.59$ sudo make install →Pour envoyer les fichiers dans l’arborescence
 
-
 →Pour vérifier que apache est bien installer, on va faire la commande suivante:
     • :~$ /usr/local/apache2/bin/httpd -v
-INSTALLATION DE PHP
+    INSTALLATION DE PHP
 CODE SOURCE:php-8.3.6.tar.gz
 →Il faut tout d’abord décompresser et désarchiver:
     • :~$ tar -zxvf httpd-2.4.59.tar.gz
-
+    
 →Après on va se déplacer dans le répertoire:
     • :~$ cd php-8.3.6
-
+    
 →Puis,il faut lire les documentations pour comprendre comment installer php.
     • :~/php-8.3.6$ more README.md
 
